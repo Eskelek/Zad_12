@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,300i&amp;subset=latin-ext" rel="stylesheet"> 
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
     <title>apka</title>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
     <link rel="stylesheet" href="style.css">
@@ -8,18 +10,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-    <main> 
-        <header> 
-            <h1>Random quote machine</h1> 
-        </header> 
-        <div class="box">
-            <h2 class="quote"></h2> 
-            <h3 class="author"></h3> 
-        </div> 
-        <div> 
-            <button class="trigger"> Random quote </button> 
-            <a href="#" target="_blank" class="tweet"><i class="fa fa-lg fa-twitter"></i> Tweet</a> 
-        </div> 
+    <main>
+        <div class="wrap">
+            <header> 
+                <h1>Random quote machine</h1> 
+            </header> 
+            <div class="box">
+                <h2 class="quote"></h2> 
+                <h3 class="author"></h3> 
+            </div> 
+            <div class="button"> 
+                <button class="trigger"> Random quote </button> 
+                <button><a href="#" target="_blank" class="tweet"><i class="fa fa-lg fa-twitter"></i> Tweet</a></button>
+            </div>
+        </div>
     </main>
     <script type="text/javascript" src="script.js"></script>
 </body>
