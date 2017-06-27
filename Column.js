@@ -14,11 +14,11 @@ function Column(id, name) {
 		var columnAddCard = $('<button class="column-add-card">Dodaj kartę</button>');
 		
 		// PODPINANIE ODPOWIEDNICH ZDARZEŃ POD WĘZŁY
-		columnDelete.click(function() {
+		columnDelete.click(function () {
 			self.deleteColumn();
 		});
 		
-		columnAddCard.click(function(event) {
+		columnAddCard.click(function (event){
             var cardName = prompt("Enter the name of the card");
 			event.preventDefault();
             $.ajax({ 
@@ -39,7 +39,7 @@ function Column(id, name) {
 			.append(columnAddCard)
 			.append(columnCardList);
 			return column;
-		}
+		});
 	}
 Column.prototype = {
 	createCard: function(card) {
@@ -54,4 +54,6 @@ Column.prototype = {
                 self.element.remove(); 
             }
 	       });
+    }
+}
 }

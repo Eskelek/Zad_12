@@ -28,7 +28,7 @@ $(function(){
   };
 
   $('.create-column')
-  .click(function(){
+  .click(function() {
     board.createColumn(new Column(prompt('Wpisz nazwę kolumny')));
   });
 
