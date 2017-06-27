@@ -1,4 +1,4 @@
-var url = 'https://restcountries.eu/rest/v2/name/';
+var url = 'https://restcountries.eu/rest/v1/name/';
 var cauntriesList = $('#countries');
 
 $('#search').click(searchCountries);
@@ -11,7 +11,10 @@ function searchCountries() {
     $.ajax({
         url: url + countryName,
         method: 'GET',
-        success: showCountriesList
+        success: showCountriesList,
+        error: function(){
+          alert('there is no country here');  
+        }
     });
         
     function showCountriesList(resp) {
