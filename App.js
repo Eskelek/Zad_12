@@ -1,7 +1,7 @@
 var baseUrl = 'https://kodilla.com/pl/bootcamp-api'; 
 var myHeaders = { 
-    'X-Client-Id': 'X-Client-Id', 
-    'X-Auth-Token': 'X-Auth-Token' 
+    'X-Client-Id': '1938', 
+    'X-Auth-Token': '887d65a42462340171a990233818f619' 
 };
 
 $.ajaxSetup({ 
@@ -29,4 +29,3 @@ function setupCards(col, cards) {
         var card = new Card(card.id, card.name, card.bootcamp_kanban_column_id); col.createCard(card); 
     }); 
 }
-//create column?
