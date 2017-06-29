@@ -18,9 +18,9 @@ function Column(id, name) {
 			self.deleteColumn();
 		});
 		
-		columnAddCard.click(function (event){
+		columnAddCard.click(function (event) {
             var cardName = prompt("Enter the name of the card");
-			event.preventDefault();
+                event.preventDefault();
             $.ajax({ 
                 url: baseUrl + '/card', 
                 method: 'POST', 
@@ -32,15 +32,16 @@ function Column(id, name) {
                     self.createCard(card); 
                 } 
             });
-			
-			// KONSTRUOWANIE ELEMENTU KOLUMNY
+		});
+        	// KONSTRUOWANIE ELEMENTU KOLUMNY
 		column.append(columnTitle)
 			.append(columnDelete)
 			.append(columnAddCard)
 			.append(columnCardList);
+        
 			return column;
-		});
 	}
+}
 Column.prototype = {
 	createCard: function(card) {
 	  this.element.children('ul').append(card.element);
@@ -55,5 +56,4 @@ Column.prototype = {
             }
 	       });
     }
-}
 }
