@@ -2,22 +2,99 @@
 <html lang="pl">
 <head>
     <title>api</title>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand&amp;subset=latin-ext" rel="stylesheet">
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="grid.css">
     <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
     <body>
-        <h1>Country search engine</h1> 
-        <button id="search">Search a country</button> 
-        <input id="country-name" type="text" /> 
-        <h2>List of countries</h2> 
-        <ul id="countries"> 
-            <li>
-                <h2></h2>
-                <p></p>
-            </li> 
-        </ul>
+        <header>
+            <nav>
+                <div class="col-3"></div>
+                <h1 class="title col-6 col-m-6">Travel with passion</h1>
+                <div class="col-3 menu">
+                    <i class="fa fa-bars" id="menu" aria-hidden="true"></i>
+                    <ul class="menuItems col-5 col-m-9 col-s-12">
+                        <li class="menuItem">Contact
+                        </li>
+                        <li class="menuItem">Inspiration
+                        </li>
+                        <li class="menuItem">Tickets
+                        </li>
+                        <li class="menuItem">Questions
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <div class="wrapper row">
+                <div class="magazine col-12 col-s-12">
+                    <div class="row">
+                        <div class="col-2 empty"></div>
+                        <div class="about col-3 col-s-4 col-xs-12">
+                            <h2>About us</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                            <h2>You want more information about country where you go?</h2>
+                            <p>Use as Country search engine:)</p>
+                            <p>Capitol city`s, flags, population and many more!</p>
+                        </div>
+                        <article class="col-7 col-s-8 col-xs-12">
+                            <div class="travelInfo" id="travel1">
+                                <h1>Love the Travel</h1>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui offici</p>
+                            </div>
+                            <div class="travelInfo">
+                                <h1>How to travel without travel agency</h1>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui offici</p>
+                            </div>
+                            <div class="travelInfo">
+                                <h1>How to find information</h1>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui offici</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                <div class="find col-2 col-s-12 col-xs-12">
+                    <div class="move" id="show">
+                        <i class="fa fa-caret-right moveArrow" aria-hidden="true"></i>
+                    </div>
+                    <div class="engine">
+                        <h1>Country search engine</h1>
+                        <div class="search col-xs-12">
+                            <input class="col-xs-4" id="country-name" type="text"/>
+                            <button class="col-8 col-xs-8" id="search">Find!</button> 
+                        </div>
+                        <h2 class="col-12 col-s-12">List of countries</h2>
+                        <ul id="countries"> 
+                            <li>
+                                <h2></h2>
+                                <p></p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="col-12 row">
+            <div class="col-2 col-xs-12 made">
+                <p>MadeBy: Eskel</p>
+            </div>
+            <div class="col-8 col-m-10 col-s-10 col-xs-12 quatation">
+                <h3>"Twenty years from now you will be more disappointed by the things that you didn't do than by the ones you did do. So throw off the bowlines. Sail away from the safe harbor. Catch the trade winds in your sails. Explore. Dream. Discover." - Mark Twain
+                </h3>
+            </div>
+            <div class="col-2 like">
+                <div class="icon">
+                    <i class="fa fa-facebook"></i>
+                    <i class="fa fa-twitter"></i>
+                    <i class="fa fa-instagram"></i>
+                </div>
+            </div>
+        </footer>
         <script type="text/javascript" src="script.js"></script>
     </body>
 </html>
