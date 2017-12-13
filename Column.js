@@ -21,14 +21,17 @@ function Column(id, name) {
 		columnAddCard.click(function (event) {
             var cardName = prompt("Enter the name of the card");
                 event.preventDefault();
+            var cardText = prompt("Enter the content");
+                event.preventDefault();
             $.ajax({ 
                 url: baseUrl + '/card', 
                 method: 'POST', 
                 data: { 
-                    name: cardName, 
+                    name: cardName,
+                    content: cardText,
                     bootcamp_kanban_column_id: self.id 
                 }, success: function(response) { 
-                    var card = new Card(response.id, cardName); 
+                    var card = new Card(response.id, cardName, cardText); 
                     self.createCard(card); 
                 } 
             });

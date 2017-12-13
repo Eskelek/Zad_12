@@ -26,6 +26,7 @@ function setupColumns(columns) {
 
 function setupCards(col, cards) { 
     cards.forEach(function (card) { 
-        var card = new Card(card.id, card.name, card.bootcamp_kanban_column_id); col.createCard(card); 
+        var card = new Card(card.id, card.name, card.content, card.bootcamp_kanban_column_id); 
+        col.createCard(card); 
     }); 
 }

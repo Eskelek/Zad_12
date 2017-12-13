@@ -1,0 +1,127 @@
+*
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+$blue: #009dff
+body
+    background: url("https://images.pexels.com/photos/220320/pexels-photo-220320.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb")
+    background-position: center
+    background-size: cover
+.ui-sortable
+    min-height: 180px
+.btn-delete 
+    position: absolute
+    right: 0
+    top: 0
+    width: 22px
+    height: 22px
+    border: 1px solid $blue
+    border-radius: 50%
+    background-color: rgba(0,0,0, .5)
+    color: #fff
+    line-height: 18px
+    font-size: 14px
+    cursor: pointer
+
+/* BOARD */
+.board
+    text-align: center
+    h1
+        margin: 1% auto 0
+        width: 20%
+        background: #cecece
+        border-radius: 10px
+        border: 2px outset $blue
+        text-shadow: 0 0 1px #fff
+        color: $blue
+        font-size: 40px
+        line-height: 50px
+    .create-column
+        line-height: 25px
+        height: 30px
+        width: 10%
+        font-size: 18px
+        margin: 10px auto 20px
+        color: $blue
+        border: 2px outset $blue 
+        border-radius: 10px
+        background: #fff
+        cursor: pointer
+.column-container
+    display: flex
+    flex-direction: row
+    flex-wrap: nowrap
+    justify-content: center
+
+
+/* COLUMN */
+.column
+    order: 1
+    min-width: 300px
+    max-width: 400px
+    min-height: 70vh
+    background-color: rgba(255,255,255, .9)
+    border: 2px outset $blue
+    border-radius: 10px
+    margin-left: 8px
+    list-style: none
+    position: relative
+    .column-title
+        text-shadow: 0 0 1px #000
+        line-height: 50px
+        font-size: 35px
+        color: $blue
+        background: #cecece
+    .column-add-card 
+        cursor: pointer
+        margin: 5px 8px
+        display: block
+        line-height: 25px
+        height: 30px
+        width: 80%
+        font-size: 14px
+        margin: 10px auto 20px
+        color: $blue
+        border: 2px outset $blue 
+        border-radius: 10px
+        background: #fff
+/* STYLE KARTY */
+.card
+    box-shadow: 0 0 15px #000
+    box-sizing: border-box
+    display: block
+    min-height: 180px
+    margin: auto
+    max-width: 80%
+    margin-bottom: 5px
+    padding: 0
+    overflow: hidden
+    position: relative
+    background: #fcf683
+    &:active
+        box-shadow: 0 0 35px #000
+    .card-list
+        list-style: none
+        margin: 5px
+        padding: 0px
+
+    .card-description
+        height: 30px
+        line-height: 30px
+        margin: 0
+        font-size: 20px
+        background: #f2e718
+        color: $blue
+
+    .card-placeholder
+        box-sizing: border-box
+        display: block
+        height: 60px
+        margin-bottom: 5px
+        border: 2px solid lightgrey
+        background-color: lightblue
+    .content
+        padding-top: 10px
+        font-family: cursive
+        font-size: 16px
+        line-height: 20px
