@@ -3,12 +3,53 @@
     margin: 0
     box-sizing: border-box
 $blue: #009dff
+$grey: #cecece
 body
-    background: url("https://images.pexels.com/photos/220320/pexels-photo-220320.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb")
+    height: 100vh
+    position: relative
+    background: url("https://images.pexels.com/photos/711177/pexels-photo-711177.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb")
     background-position: center
     background-size: cover
-.ui-sortable
-    min-height: 180px
+    nav
+        height: 50px
+        background: $grey
+        border-radius: 10px
+        border: 2px outset $blue
+        position: absolute
+        top: 0
+        left: 75%
+        margin-top: 1%
+        width: 20%
+        display: flex
+        justify-content: space-around
+        flex-direction: row
+        flex-wrap: wrap
+        .menuSlot
+            font-size: 30px
+            display: flex
+            .fa
+                text-align: center
+                width: 50px
+                height: 50px
+                line-height: 50px
+                font-size: 40px
+                cursor: pointer
+                color: $blue
+        .mode
+            button
+                border-radius: 10px
+                padding: 5px
+                min-width: 50px
+                color: #fff
+                font-size: 15px
+                border: none
+                margin: 2px
+                cursor: pointer
+            #white
+                background: $blue
+            #dark
+                background: #000
+                
 .btn-delete 
     position: absolute
     right: 0
@@ -25,11 +66,12 @@ body
 
 /* BOARD */
 .board
+    padding-top: 1%
     text-align: center
     h1
-        margin: 1% auto 0
+        margin: 0 auto
         width: 20%
-        background: #cecece
+        background: $grey
         border-radius: 10px
         border: 2px outset $blue
         text-shadow: 0 0 1px #fff
@@ -60,7 +102,7 @@ body
     min-width: 300px
     max-width: 400px
     min-height: 70vh
-    background-color: rgba(255,255,255, .9)
+    background-color: rgba(255,255,255, .8)
     border: 2px outset $blue
     border-radius: 10px
     margin-left: 8px
@@ -71,7 +113,7 @@ body
         line-height: 50px
         font-size: 35px
         color: $blue
-        background: #cecece
+        background: $grey
     .column-add-card 
         cursor: pointer
         margin: 5px 8px
@@ -85,6 +127,8 @@ body
         border: 2px outset $blue 
         border-radius: 10px
         background: #fff
+    .ui-sortable
+        min-height: 180px
 /* STYLE KARTY */
 .card
     box-shadow: 0 0 15px #000
@@ -98,8 +142,10 @@ body
     overflow: hidden
     position: relative
     background: #fcf683
+    transition: .1s
     &:active
-        box-shadow: 0 0 35px #000
+        box-shadow: 0 0 45px #000
+        transform: scale(1.1)
     .card-list
         list-style: none
         margin: 5px
@@ -118,10 +164,50 @@ body
         display: block
         height: 60px
         margin-bottom: 5px
-        border: 2px solid lightgrey
+        border: 2px solid $grey
         background-color: lightblue
     .content
         padding-top: 10px
         font-family: cursive
         font-size: 16px
         line-height: 20px
+footer
+    height: 4vh
+    position: absolute
+    left: 0
+    bottom: 0
+    background: rgba(255,255,255, .6)
+    width: 100%
+    color: $blue
+    display: flex
+    flex-direction: row
+    flex-wrap: nowrap
+    justify-content: space-around
+    padding: 0
+    .made
+        margin: auto 5% 
+        align-self: stretch
+        flex-grow: 2
+        font-size: 20px
+        display: flex
+    .share
+        flex-grow: 1
+        align-self: stretch
+        display: flex
+        justify-content: center
+        .fa
+            margin: auto 10px
+            border-radius: 50%
+            height: 35px
+            width: 35px
+            background: $grey
+            border: 2px outset $blue
+            text-align: center
+            line-height: 35px
+            font-size: 20px
+            cursor: pointer
+            transition: 0.4
+            &:hover
+                background: $blue
+                color: $grey
+            

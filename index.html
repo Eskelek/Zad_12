@@ -4,18 +4,40 @@
     <meta charset="utf-8">
     <title>Tablica kanban</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 <body>
+    <nav>
+        <div class="mode menuSlot">
+            <button id="white">Light Mode</button>
+            <button id="dark">Dark Mode</button>
+        </div>
+        <div class="contact menuSlot">
+            <i class="fa fa-envelope-o" aria-hidden="true"></i>
+        </div>
+        <div class="user menuSlot">
+            <i class="fa fa-users" aria-hidden="true"></i>
+        </div>
+    </nav>
 	<div id="board" class="board">
         <h1>Tablica kanban</h1>
         <button class="create-column">Dodaj kolumnę</button>
         <div class="column-container"></div>
 	</div>
+    <footer>
+        <h4 class="made">Made by: Eskel. 2017</h4>
+        <div class="share">
+            <i class="fa fa-facebook"></i>
+            <i class="fa fa-twitter"></i>
+            <i class="fa fa-instagram"></i>
+        </div>
+    </footer>
     <script src="https://code.jquery.com/jquery-3.0.0.min.js" integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0=" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"   integrity="sha256-xNjb53/rY+WmG+4L6tTl9m6PpqknWZvRt0rO1SRnJzw="   crossorigin="anonymous"></script>
     <script type="text/javascript" src="Column.js"></script>
     <script type="text/javascript" src="Card.js"></script>
     <script type="text/javascript" src="Board.js"></script>
     <script type="text/javascript" src="App.js"></script>
+    <script type="text/javascript" src="menu.js"></script>
 </body>
 </html>

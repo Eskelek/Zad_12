@@ -25,4 +25,4 @@ function initSortable() {
       connectWith: '.card-list',
       placeholder: 'card-placeholder'
     }).disableSelection();
-  }
+}

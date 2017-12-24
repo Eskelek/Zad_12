@@ -4,12 +4,49 @@
   box-sizing: border-box; }
 
 body {
-  background: url("https://images.pexels.com/photos/220320/pexels-photo-220320.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb");
+  height: 100vh;
+  position: relative;
+  background: url("https://images.pexels.com/photos/711177/pexels-photo-711177.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb");
   background-position: center;
   background-size: cover; }
-
-.ui-sortable {
-  min-height: 180px; }
+  body nav {
+    height: 50px;
+    background: #cecece;
+    border-radius: 10px;
+    border: 2px outset #009dff;
+    position: absolute;
+    top: 0;
+    left: 75%;
+    margin-top: 1%;
+    width: 20%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap; }
+    body nav .menuSlot {
+      font-size: 30px;
+      display: flex; }
+      body nav .menuSlot .fa {
+        text-align: center;
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        font-size: 40px;
+        cursor: pointer;
+        color: #009dff; }
+    body nav .mode button {
+      border-radius: 10px;
+      padding: 5px;
+      min-width: 50px;
+      color: #fff;
+      font-size: 15px;
+      border: none;
+      margin: 2px;
+      cursor: pointer; }
+    body nav .mode #white {
+      background: #009dff; }
+    body nav .mode #dark {
+      background: #000; }
 
 .btn-delete {
   position: absolute;
@@ -27,9 +64,10 @@ body {
 
 /* BOARD */
 .board {
+  padding-top: 1%;
   text-align: center; }
   .board h1 {
-    margin: 1% auto 0;
+    margin: 0 auto;
     width: 20%;
     background: #cecece;
     border-radius: 10px;
@@ -62,7 +100,7 @@ body {
   min-width: 300px;
   max-width: 400px;
   min-height: 70vh;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255, 0.8);
   border: 2px outset #009dff;
   border-radius: 10px;
   margin-left: 8px;
@@ -87,6 +125,8 @@ body {
     border: 2px outset #009dff;
     border-radius: 10px;
     background: #fff; }
+  .column .ui-sortable {
+    min-height: 180px; }
 
 /* STYLE KARTY */
 .card {
@@ -100,9 +140,11 @@ body {
   padding: 0;
   overflow: hidden;
   position: relative;
-  background: #fcf683; }
+  background: #fcf683;
+  transition: .1s; }
   .card:active {
-    box-shadow: 0 0 35px #000; }
+    box-shadow: 0 0 45px #000;
+    transform: scale(1.1); }
   .card .card-list {
     list-style: none;
     margin: 5px;
@@ -119,12 +161,52 @@ body {
     display: block;
     height: 60px;
     margin-bottom: 5px;
-    border: 2px solid lightgrey;
+    border: 2px solid #cecece;
     background-color: lightblue; }
   .card .content {
     padding-top: 10px;
     font-family: cursive;
     font-size: 16px;
     line-height: 20px; }
+
+footer {
+  height: 4vh;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.6);
+  width: 100%;
+  color: #009dff;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  padding: 0; }
+  footer .made {
+    margin: auto 5%;
+    align-self: stretch;
+    flex-grow: 2;
+    font-size: 20px;
+    display: flex; }
+  footer .share {
+    flex-grow: 1;
+    align-self: stretch;
+    display: flex;
+    justify-content: center; }
+    footer .share .fa {
+      margin: auto 10px;
+      border-radius: 50%;
+      height: 35px;
+      width: 35px;
+      background: #cecece;
+      border: 2px outset #009dff;
+      text-align: center;
+      line-height: 35px;
+      font-size: 20px;
+      cursor: pointer;
+      transition: 0.4; }
+      footer .share .fa:hover {
+        background: #009dff;
+        color: #cecece; }
 
 /*# sourceMappingURL=style.css.map */
